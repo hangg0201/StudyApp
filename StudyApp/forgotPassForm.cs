@@ -37,13 +37,13 @@ namespace StudyApp
         private void forgotBtn_Click(object sender, EventArgs e)
         {
             MailMessage mail = new MailMessage();
-            mail.From = new System.Net.Mail.MailAddress("ngtngochaa@gmail.com");
+            mail.From = new System.Net.Mail.MailAddress("");
             SmtpClient smtp = new SmtpClient();
             smtp.Port = 587;
             smtp.EnableSsl = true;
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new NetworkCredential("ngtngochaa@gmail.com", "oqvgbrazqlwmrfbn");
+            smtp.Credentials = new NetworkCredential("", "");
             smtp.Host = "smtp.gmail.com";
 
             //recipient
