@@ -1,5 +1,5 @@
 # 📚 StudyApp
-StudyApp is a learning support application developed as part of the CS526 - C# Programming Language course assignment (UIT). This application simulates a simple online learning platform with features for course management, progress tracking, and knowledge assessment.
+StudyApp is a learning support application developed as part of the CS511 - C# Programming Language course assignment (UIT). This application simulates a simple online learning platform with features for course management, progress tracking, and knowledge assessment.
 
 ## ✨ Key Features
 **User Registration & Logi**n: Users can create accounts and log in to access the application.
