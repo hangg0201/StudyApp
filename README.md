@@ -1,9 +1,21 @@
-# StudyApp
+# 📚 StudyApp
+StudyApp is a learning support application developed as part of the CS526 - C# Programming Language course assignment. This application simulates a simple online learning platform with features for course management, progress tracking, and knowledge assessment.
 
-## Study App with several main function
-### 1. Sign In Form
-![image](https://github.com/user-attachments/assets/676bb1e0-bfb7-4035-9095-7fd40171cbfc)
-### 2. Sign Up Form
-![image](https://github.com/user-attachments/assets/11bb6834-1b7f-40de-a995-d4fc080b326a)
-### 3. Forgot Password Form
-![image](https://github.com/user-attachments/assets/3491d345-1c9e-49e1-b6b1-52a789dfa542)
+## ✨ Key Features
+**User Registration & Logi**n: Users can create accounts and log in to access the application.
+
+**Password Recovery**: Allows users to reset their password if forgotten.
+
+**Course Catalog**: Displays a list of available courses.
+
+**Enroll in Courses**: Users can register for and participate in courses of interest.
+
+**Progress Tracking**: Saves the user's progress for each course.
+
+**Video Lectures**: Supports video playback for course lessons.
+
+**Quizzes**: Provides tests to assess users' knowledge.
+
+**Additional Reading Materials**: Offers supplementary documents for better learning.
+
+**Completion Certificate**: Issues certificates after successfully completing a course
