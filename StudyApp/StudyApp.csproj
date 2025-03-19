@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D3BF5F9-20D9-48A5-B55B-C66CDB7772D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StudyApp</RootNamespace>
+    <AssemblyName>StudyApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Server.1.0.0\lib\net46\Microsoft.SqlServer.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="certificateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="certificateForm.Designer.cs">
+      <DependentUpon>certificateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="certInfo.cs" />
+    <Compile Include="Course.cs" />
+    <Compile Include="courseDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="courseDetail.Designer.cs">
+      <DependentUpon>courseDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="courseProcess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="courseProcess.Designer.cs">
+      <DependentUpon>courseProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="done.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="done.Designer.cs">
+      <DependentUpon>done.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doneCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="doneCourse.Designer.cs">
+      <DependentUpon>doneCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fillinanswer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fillinanswer.Designer.cs">
+      <DependentUpon>fillinanswer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forgotPassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forgotPassForm.Designer.cs">
+      <DependentUpon>forgotPassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="homeCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="homeCourse.Designer.cs">
+      <DependentUpon>homeCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="multiplechoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="multiplechoice.Designer.cs">
+      <DependentUpon>multiplechoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="multipleselectchoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="multipleselectchoice.Designer.cs">
+      <DependentUpon>multipleselectchoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="profileAchievement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="profileAchievement.Designer.cs">
+      <DependentUpon>profileAchievement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="profileCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="profileCourse.Designer.cs">
+      <DependentUpon>profileCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="profileDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="profileDetail.Designer.cs">
+      <DependentUpon>profileDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="progress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="progress.Designer.cs">
+      <DependentUpon>progress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="progressCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="progressCourse.Designer.cs">
+      <DependentUpon>progressCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="quizDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="quizDetail.Designer.cs">
+      <DependentUpon>quizDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="readingDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="readingDetails.Designer.cs">
+      <DependentUpon>readingDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reviewDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="reviewDetail.Designer.cs">
+      <DependentUpon>reviewDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reviewSmall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="reviewSmall.Designer.cs">
+      <DependentUpon>reviewSmall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoundPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SignInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignInForm.Designer.cs">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signUpForm.Designer.cs">
+      <DependentUpon>signUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userReview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userReview.Designer.cs">
+      <DependentUpon>userReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="videoDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="videoDetail.Designer.cs">
+      <DependentUpon>videoDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="videoDetailsProgress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="videoDetailsProgress.Designer.cs">
+      <DependentUpon>videoDetailsProgress.cs</DependentUpon>
+    </Compile>
+    <None Include="Resources\star1.png" />
+    <None Include="Resources\star-click2.png" />
+    <None Include="Properties\DataSources\certificateForm.datasource" />
+    <None Include="Resources\quiz.png" />
+    <None Include="Resources\circlered1.png" />
+    <None Include="Resources\circlered.png" />
+    <None Include="Resources\circle1.png" />
+    <None Include="Resources\star-click1.png" />
+    <None Include="Resources\star-click.png" />
+    <None Include="Resources\star-clicked.png" />
+    <None Include="Resources\green-tick2.png" />
+    <None Include="Resources\green-tick.png" />
+    <None Include="Resources\arrow-right.png" />
+    <None Include="Resources\video2.png" />
+    <EmbeddedResource Include="cert.rdlc" />
+    <EmbeddedResource Include="certificateForm.resx">
+      <DependentUpon>certificateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="done.resx">
+      <DependentUpon>done.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doneCourse.resx">
+      <DependentUpon>doneCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fillinanswer.resx">
+      <DependentUpon>fillinanswer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forgotPassForm.resx">
+      <DependentUpon>forgotPassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="multiplechoice.resx">
+      <DependentUpon>multiplechoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="multipleselectchoice.resx">
+      <DependentUpon>multipleselectchoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="progress.resx">
+      <DependentUpon>progress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="quizDetail.resx">
+      <DependentUpon>quizDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="readingDetails.resx">
+      <DependentUpon>readingDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reviewDetail.resx">
+      <DependentUpon>reviewDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reviewSmall.resx">
+      <DependentUpon>reviewSmall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="videoDetail.resx">
+      <DependentUpon>videoDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="videoDetailsProgress.resx">
+      <DependentUpon>videoDetailsProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\edit-21.png" />
+    <None Include="Resources\edit-2.png" />
+    <None Include="Resources\medal1.png" />
+    <None Include="Resources\medal.png" />
+    <None Include="Resources\arrow-left.png" />
+    <None Include="Resources\avatar1.png" />
+    <EmbeddedResource Include="courseProcess.resx">
+      <DependentUpon>courseProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profileAchievement.resx">
+      <DependentUpon>profileAchievement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profileCourse.resx">
+      <DependentUpon>profileCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profileDetail.resx">
+      <DependentUpon>profileDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userReview.resx">
+      <DependentUpon>userReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\star.png" />
+    <None Include="Resources\translate.png" />
+    <None Include="Resources\video1.png" />
+    <None Include="Resources\coursera-projectnetwork-purplesquare.png" />
+    <None Include="Resources\pythonCourse.png" />
+    <None Include="Resources\search1.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\Frame 7 %281%29.png" />
+    <None Include="Resources\logout2.png" />
+    <None Include="Resources\aboutus1.png" />
+    <None Include="Resources\profile1.png" />
+    <None Include="Resources\donecourse1.png" />
+    <None Include="Resources\cert1.png" />
+    <None Include="Resources\check1.png" />
+    <None Include="Resources\inprogress2.png" />
+    <None Include="Resources\Frame 71.png" />
+    <None Include="Resources\logout1.png" />
+    <None Include="Resources\inprogress1.png" />
+    <None Include="Resources\video.png" />
+    <None Include="Resources\avaOrg.png" />
+    <None Include="Resources\courseThumbnails.png" />
+    <None Include="Resources\avatar.png" />
+    <None Include="Resources\aboutus.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\profile.png" />
+    <None Include="Resources\cert.png" />
+    <None Include="Resources\donecourse.png" />
+    <None Include="Resources\inprogress.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\Frame 7.png" />
+    <None Include="Resources\logowithtext.png" />
+    <EmbeddedResource Include="courseDetail.resx">
+      <DependentUpon>courseDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homeCourse.resx">
+      <DependentUpon>homeCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="progressCourse.resx">
+      <DependentUpon>progressCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signUpForm.resx">
+      <DependentUpon>signUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\logo.png" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignInForm.resx">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+  </Target>
+</Project>
